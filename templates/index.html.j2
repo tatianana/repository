@@ -12,6 +12,14 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="scene" aria-hidden="true">
+    <div class="scene__glow"></div>
+    <div class="scene__sun"></div>
+    <div class="scene__floor"></div>
+    <span class="scene__palm scene__palm--left">🌴</span>
+    <span class="scene__palm scene__palm--right">🌴</span>
+  </div>
+
   <div class="marquee" aria-hidden="true">
     <div class="marquee__track">
       {% for _ in range(2) %}
@@ -23,8 +31,9 @@
   <header class="header">
     <img class="header__cat header__cat--left" src="images/cat.svg" alt="">
     <img class="header__cat header__cat--right" src="images/cat.svg" alt="">
-    <p class="header__tag">✧ birthday edition ✧</p>
-    <h1 class="title" data-text="{{ site.title }}">{{ site.title }}</h1>
+    <p class="header__tag">birthday edition</p>
+    <h1 class="title">{{ site.title }}</h1>
+    {% if site.title_jp %}<p class="title-jp" lang="ja">{{ site.title_jp }}</p>{% endif %}
     {% if site.subtitle %}
     <div class="win win--readme">
       <div class="win__bar">
@@ -67,10 +76,10 @@
   <footer class="footer">
     <div class="footer__badges" aria-hidden="true">
       <span>MEOW POWERED</span>
-      <span>Y2K COMPLIANT</span>
+      <span>A E S T H E T I C</span>
       <span>NO DUPLICATE GIFTS</span>
     </div>
-    <p>разработана при помощи пьяного вайбкодинга</p>
+    <p>разработан при помощи пьяного вайбкодинга</p>
   </footer>
 
   <script id="wishlist-config" type="application/json">{{ client_config | tojson }}</script>
