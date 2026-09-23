@@ -55,4 +55,5 @@ python build.py --serve
 ## Публикация на GitHub Pages
 
 1. В репозитории откройте **Settings → Pages → Source** и выберите **GitHub Actions**.
-2. Сделайте push в ветку `master`. Workflow `.github/workflows/pages.yml` соберёт и опубликует сайт по адресу `https://<username>.github.io/<repo>/`.
+2. В **Settings → Environments → github-pages → Deployment branches and tags** разрешите ветку `wish_list`.
+3. Сделайте push в ветку `wish_list`. Workflow `.github/workflows/pages.yml` соберёт и опубликует сайт по адресу `https://<username>.github.io/<repo>/`.
