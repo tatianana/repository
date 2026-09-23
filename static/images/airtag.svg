@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <radialGradient id="g" cx="0.5" cy="0.35" r="0.8"><stop offset="0" stop-color="#e6e9f5"/><stop offset="1" stop-color="#3b3f8f"/></radialGradient>
+    <radialGradient id="tag" cx="0.4" cy="0.35" r="0.7"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#cfd4e6"/></radialGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#fff" stroke-opacity="0.18"/></pattern>
+  </defs>
+  <rect width="400" height="300" fill="url(#g)"/>
+  <rect width="400" height="300" fill="url(#grid)"/>
+  <text x="60" y="60" font-size="28" fill="#fff">✦</text>
+  <text x="340" y="230" font-size="26" fill="#fff">✦</text>
+  <circle cx="175" cy="125" r="62" fill="url(#tag)" stroke="#1a0b33" stroke-width="5"/>
+  <circle cx="175" cy="125" r="40" fill="none" stroke="#9aa1bd" stroke-width="3"/>
+  <text x="175" y="127" font-size="34" text-anchor="middle" dominant-baseline="central">📍</text>
+  <text x="300" y="70" font-size="52" text-anchor="middle" dominant-baseline="central">🎒</text>
+  <text x="325" y="100" font-size="30" text-anchor="middle" dominant-baseline="central">✈️</text>
+  <text x="280" y="170" font-size="60" text-anchor="middle" dominant-baseline="central">🙀</text>
+</svg>
