@@ -122,6 +122,16 @@ body {
 }
 @keyframes floor { to { transform: rotateX(62deg) translateY(0); } }
 
+@media (hover: none), (pointer: coarse) {
+  .scene__floor {
+    perspective: none;
+    background:
+      url("images/grid-floor.svg") 0 0 / 100% 100% no-repeat,
+      linear-gradient(180deg, #2a0845, #12001f);
+  }
+  .scene__floor::before { display: none; }
+}
+
 .scene__palm {
   position: absolute;
   bottom: calc(var(--horizon) - 3vh);
