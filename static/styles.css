@@ -14,6 +14,8 @@
 
 * { box-sizing: border-box; }
 
+html { overflow-x: clip; -webkit-text-size-adjust: 100%; }
+
 body {
   margin: 0;
   font-family: "Rubik", system-ui, sans-serif;
@@ -190,7 +192,7 @@ body::before {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(270px, 100%), 1fr));
   gap: 32px;
   max-width: 1200px;
   margin: 0 auto;
@@ -204,13 +206,15 @@ body::before {
 }
 .card:nth-child(3n + 1) { rotate: -0.8deg; }
 .card:nth-child(3n + 2) { rotate: 0.6deg; }
-.card:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow:
-    inset 2px 2px 0 #fff,
-    inset -2px -2px 0 #a99bd1,
-    8px 8px 0 var(--cyan),
-    0 0 40px rgba(255, 79, 216, 0.6);
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow:
+      inset 2px 2px 0 #fff,
+      inset -2px -2px 0 #a99bd1,
+      8px 8px 0 var(--cyan),
+      0 0 40px rgba(255, 79, 216, 0.6);
+  }
 }
 
 .card__media {
@@ -304,7 +308,9 @@ body::before {
 .btn:disabled { cursor: default; }
 
 .btn--book { background: var(--holo); background-size: 200% 100%; }
-.btn--book:hover:not(:disabled) { filter: saturate(1.4) brightness(1.08); animation: holo 2s linear infinite; }
+@media (hover: hover) {
+  .btn--book:hover:not(:disabled) { filter: saturate(1.4) brightness(1.08); animation: holo 2s linear infinite; }
+}
 .btn--book:disabled {
   background: repeating-linear-gradient(45deg, #d8d2e8 0 8px, #c5bddb 8px 16px);
   color: #6e6488;
@@ -372,8 +378,30 @@ body::before {
 }
 
 @media (max-width: 640px) {
-  .header__cat { top: 8px; width: 64px; opacity: 0.85; }
+  .header { padding: 84px 16px 8px; }
+  .header__cat { top: 14px; width: 60px; }
+  .header__cat--left { left: 16px; }
+  .header__cat--right { right: 16px; }
+  .header__tag { font-size: 10px; }
+  .title { font-size: clamp(1.9rem, 10vw, 2.6rem); }
+  .win--readme { margin-top: 24px; transform: none; }
+  .subtitle { padding: 12px 14px; font-size: 0.95rem; }
+  .notice { margin: 8px 16px 16px; }
+
+  .grid { gap: 24px; padding: 16px 16px 40px; }
+  .win {
+    box-shadow:
+      inset 2px 2px 0 #fff,
+      inset -2px -2px 0 #a99bd1,
+      4px 4px 0 var(--pink),
+      0 0 20px rgba(51, 240, 255, 0.3);
+  }
   .card, .card:nth-child(n) { rotate: 0deg; }
+  .card__body { padding: 14px 14px 16px; }
+  .card__meme { font-size: 1.15rem; }
+  .card__desc { font-size: 0.95rem; }
+  .btn { font-size: 11px; padding: 15px 10px; }
+  .footer__badges span { font-size: 7px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
