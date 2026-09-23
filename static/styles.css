@@ -39,7 +39,6 @@ body {
   height: 100vh;
   height: 100lvh;
   z-index: -1;
-  transform: translateZ(0);
   overflow: hidden;
   pointer-events: none;
   background: linear-gradient(180deg, #14002b 0%, #3a0a6b 30%, #8a2a9e 50%, #ff71ce 62%, #ffb3e6 68%);
@@ -113,10 +112,13 @@ body {
     linear-gradient(var(--pink) 2px, transparent 2px),
     linear-gradient(90deg, var(--pink) 2px, transparent 2px);
   background-size: 60px 60px;
-  animation: floor 2.5s linear infinite;
-  will-change: transform;
-  backface-visibility: hidden;
   opacity: 0.8;
+}
+@media (hover: hover) and (pointer: fine) {
+  .scene__floor::before {
+    animation: floor 2.5s linear infinite;
+    will-change: transform;
+  }
 }
 @keyframes floor { to { transform: rotateX(62deg) translateY(0); } }
 
@@ -143,7 +145,6 @@ body::after {
   right: 0;
   height: 100vh;
   height: 100lvh;
-  transform: translateZ(0);
   z-index: 999;
   pointer-events: none;
   background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.07) 0 1px, transparent 1px 3px);
