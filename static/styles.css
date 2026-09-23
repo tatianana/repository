@@ -33,8 +33,13 @@ body {
 
 .scene {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  height: 100lvh;
   z-index: -1;
+  transform: translateZ(0);
   overflow: hidden;
   pointer-events: none;
   background: linear-gradient(180deg, #14002b 0%, #3a0a6b 30%, #8a2a9e 50%, #ff71ce 62%, #ffb3e6 68%);
@@ -103,15 +108,17 @@ body {
   top: 0;
   height: 200%;
   transform-origin: 50% 0;
-  transform: rotateX(62deg);
+  transform: rotateX(62deg) translateY(-60px);
   background-image:
     linear-gradient(var(--pink) 2px, transparent 2px),
     linear-gradient(90deg, var(--pink) 2px, transparent 2px);
   background-size: 60px 60px;
   animation: floor 2.5s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
   opacity: 0.8;
 }
-@keyframes floor { to { background-position: 0 60px; } }
+@keyframes floor { to { transform: rotateX(62deg) translateY(0); } }
 
 .scene__palm {
   position: absolute;
@@ -124,10 +131,19 @@ body {
 .scene__palm--left { left: -2vw; }
 .scene__palm--right { right: -2vw; scale: -1 1; }
 
+@supports (height: 1lvh) {
+  :root { --horizon: 42lvh; }
+}
+
 body::after {
   content: "";
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  height: 100lvh;
+  transform: translateZ(0);
   z-index: 999;
   pointer-events: none;
   background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.07) 0 1px, transparent 1px 3px);
