@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <radialGradient id="g" cx="0.5" cy="0.35" r="0.8"><stop offset="0" stop-color="#ff4fd8"/><stop offset="1" stop-color="#2a1470"/></radialGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#fff" stroke-opacity="0.18"/></pattern>
+  </defs>
+  <rect width="400" height="300" fill="url(#g)"/>
+  <rect width="400" height="300" fill="url(#grid)"/>
+  <text x="50" y="55" font-size="28" fill="#fff">✦</text>
+  <text x="345" y="235" font-size="26" fill="#fff">✦</text>
+  <g stroke="#1a0b33" stroke-width="5" stroke-linejoin="round">
+    <rect x="140" y="62" width="80" height="22" rx="6" fill="#b6ff3b"/>
+    <rect x="128" y="80" width="104" height="120" rx="18" fill="#f4ecff"/>
+  </g>
+  <rect x="140" y="112" width="80" height="50" rx="6" fill="#1a0b33"/>
+  <text x="180" y="138" font-family="Impact, Arial Black, sans-serif" font-size="22" fill="#b6ff3b" text-anchor="middle" dominant-baseline="central">WHEY</text>
+  <text x="80" y="140" font-size="52" text-anchor="middle" dominant-baseline="central">💪</text>
+  <text x="300" y="80" font-size="40" text-anchor="middle" dominant-baseline="central">🏋️‍♀️</text>
+  <text x="290" y="165" font-size="64" text-anchor="middle" dominant-baseline="central">😼</text>
+</svg>
