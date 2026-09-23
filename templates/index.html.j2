@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.subtitle }}">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>😻</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Press+Start+2P&family=Rubik:wght@400;500&family=Oswald:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      {% for _ in range(2) %}
+      <span>{% for phrase in site.marquee %}✦ {{ phrase }} {% endfor %}</span>
+      {% endfor %}
+    </div>
+  </div>
+
+  <header class="header">
+    <img class="header__cat header__cat--left" src="images/cat.svg" alt="">
+    <img class="header__cat header__cat--right" src="images/cat.svg" alt="">
+    <p class="header__tag">✧ birthday edition ✧</p>
+    <h1 class="title" data-text="{{ site.title }}">{{ site.title }}</h1>
+    {% if site.subtitle %}
+    <div class="win win--readme">
+      <div class="win__bar">
+        <span class="win__title">💬 readme.txt</span>
+        <span class="win__btns" aria-hidden="true"><i>_</i><i>□</i><i>×</i></span>
+      </div>
+      <p class="subtitle">{{ site.subtitle }}</p>
+    </div>
+    {% endif %}
+  </header>
+
+  <div id="notice" class="notice" hidden></div>
+
+  <main class="grid">
+    {% for gift in gifts %}
+    <article class="card win is-loading" data-gift-id="{{ gift.id }}">
+      <div class="win__bar">
+        <span class="win__title">🎁 {{ gift.id }}.exe</span>
+        <span class="win__btns" aria-hidden="true"><i>_</i><i>□</i><i>×</i></span>
+      </div>
+      <div class="card__media">
+        <img class="card__img" src="{{ gift.image }}" alt="{{ gift.title }}" loading="lazy">
+        {% if gift.meme %}<p class="card__meme">{{ gift.meme }}</p>{% endif %}
+        <span class="card__badge" hidden></span>
+      </div>
+      <div class="card__body">
+        <h2 class="card__title">{{ gift.title }}</h2>
+        {% if gift.price %}<p class="card__price">{{ gift.price }}</p>{% endif %}
+        <p class="card__desc">{{ gift.description }}</p>
+        {% if gift.link %}<a class="card__link" href="{{ gift.link }}" target="_blank" rel="noopener">&gt;&gt; где купить</a>{% endif %}
+        <div class="card__actions">
+          <button class="btn btn--book" type="button" disabled>забронировать ✦</button>
+          <button class="btn btn--cancel" type="button" hidden>отменить бронь</button>
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  </main>
+
+  <footer class="footer">
+    <div class="footer__badges" aria-hidden="true">
+      <span>MEOW POWERED</span>
+      <span>Y2K COMPLIANT</span>
+      <span>NO DUPLICATE GIFTS</span>
+    </div>
+    <p>разработана при помощи пьяного вайбкодинга</p>
+  </footer>
+
+  <script id="wishlist-config" type="application/json">{{ client_config | tojson }}</script>
+  <script type="module" src="effects.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "title": "Tatiana's wish list",
+  "subtitle": "мяу! это мой вишлист ко дню рождения 🎂 выбирай подарок и жми «забронировать», чтобы никто не подарил то же самое. котик следит за порядком 😼",
+  "marquee": [
+    "мяу",
+    "у меня день рождения",
+    "кот одобряет этот вишлист",
+    "забронируй подарок, пока не поздно",
+    "ня",
+    "no duplicate gifts allowed",
+    "ты сейчас на самом милом сайте в интернете",
+    "подарки > мемы > котики... хотя нет, котики первые"
+  ],
+  "bookings_collection": "bookings",
+  "firebase": {
+    "apiKey": "AIzaSyBHCjOUZoTyxmjkgOJqTewROfBDiHzj8us",
+    "authDomain": "wish-2a485.firebaseapp.com",
+    "projectId": "wish-2a485",
+    "appId": "1:666813471722:web:65e86a4c1e89344ccdf093"
+  }
+}
