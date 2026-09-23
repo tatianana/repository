@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <radialGradient id="g" cx="0.5" cy="0.35" r="0.8"><stop offset="0" stop-color="#ffe29a"/><stop offset="1" stop-color="#c2187a"/></radialGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#fff" stroke-opacity="0.18"/></pattern>
+  </defs>
+  <rect width="400" height="300" fill="url(#g)"/>
+  <rect width="400" height="300" fill="url(#grid)"/>
+  <text x="60" y="60" font-size="28" fill="#fff">✦</text>
+  <text x="330" y="80" font-size="30" text-anchor="middle" dominant-baseline="central">💎</text>
+  <text x="80" y="180" font-size="30" text-anchor="middle" dominant-baseline="central">💸</text>
+  <text x="340" y="230" font-size="26" fill="#fff">✦</text>
+  <text x="165" y="120" font-size="90" text-anchor="middle" dominant-baseline="central">🧴</text>
+  <text x="225" y="100" font-size="56" text-anchor="middle" dominant-baseline="central">✨</text>
+  <text x="280" y="165" font-size="64" text-anchor="middle" dominant-baseline="central">😼</text>
+</svg>

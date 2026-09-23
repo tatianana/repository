@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <radialGradient id="g" cx="0.5" cy="0.35" r="0.8"><stop offset="0" stop-color="#b6ff3b"/><stop offset="1" stop-color="#1d3fb8"/></radialGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e3e6f0"/><stop offset="1" stop-color="#8e94ad"/></linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7ee8fa"/><stop offset="1" stop-color="#ff9ad5"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#fff" stroke-opacity="0.18"/></pattern>
+  </defs>
+  <rect width="400" height="300" fill="url(#g)"/>
+  <rect width="400" height="300" fill="url(#grid)"/>
+  <text x="50" y="55" font-size="28" fill="#fff">✦</text>
+  <text x="345" y="235" font-size="26" fill="#fff">✦</text>
+  <g stroke="#1a0b33" stroke-width="5" stroke-linejoin="round">
+    <rect x="120" y="85" width="150" height="80" rx="16" fill="url(#body)"/>
+    <rect x="262" y="98" width="42" height="54" rx="8" fill="#5b607a"/>
+    <circle cx="304" cy="125" r="22" fill="#2a2f45"/>
+    <circle cx="304" cy="125" r="11" fill="#7ee8fa"/>
+    <rect x="150" y="70" width="60" height="20" rx="6" fill="#5b607a"/>
+    <path d="M120 95 L68 78 L68 150 L120 150 Z" fill="url(#screen)"/>
+  </g>
+  <circle cx="300" cy="120" r="4" fill="#fff"/>
+  <circle cx="250" cy="100" r="6" fill="#ff3b5c"/>
+  <text x="96" y="118" font-size="30" text-anchor="middle" dominant-baseline="central">😺</text>
+  <circle cx="146" cy="46" r="7" fill="#ff3b5c"/>
+  <text x="158" y="52" font-family="monospace" font-weight="bold" font-size="18" fill="#fff">REC</text>
+  <text x="300" y="190" font-size="54" text-anchor="middle" dominant-baseline="central">😻</text>
+</svg>
